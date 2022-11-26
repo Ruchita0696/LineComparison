@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 namespace LineComparison
 {
     internal class lineComparison
-    {
-        private string length_Of_A_Line;
-
+    { 
         public void lenthOfLine()
         {
-     
+
+            Console.WriteLine("------- Enter the points of first line ------- ");
             Console.Write(" Enter the value of x1 : ");
             int x1 = Convert.ToInt32(Console.ReadLine());
             Console.Write(" Enter the value of  x2 : ");
@@ -25,8 +24,32 @@ namespace LineComparison
             double length_Of_1stLine = ((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
             // Also use this predined Math.Sqrt method for solving equation
             // double length_Of_A_Line = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            Console.WriteLine(" The length of a line is (x2 - x1) ^ 2 + (y2 - y1) ^ 2  = " + length_Of_A_Line);
 
+            Console.WriteLine("------- Enter the points of second line ------- ");
+            Console.Write(" Enter the value of p1 : ");
+            int p1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the value of p2 : ");
+            int p2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the value of q1 : ");
+            int q1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write(" Enter the value of q2 : ");
+            int q2 = Convert.ToInt32(Console.ReadLine());
+
+            double length_Of_2ndLine = Math.Sqrt(Math.Pow(p2 - p1, 2) + Math.Pow(q2 - q1, 2));
+
+            if (length_Of_1stLine == length_Of_2ndLine)
+            {
+                Console.WriteLine("\nBoth lines in equal length");
+            }
+            if (length_Of_1stLine > length_Of_2ndLine)
+            {
+                Console.WriteLine("\n 1st line is greater than 2nd line ");
+            }
+            else
+            {
+                Console.WriteLine("\n  2nd line is greater than 1st line ");
+
+            }
         }
     }
     
